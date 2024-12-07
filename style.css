@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #eff1aa !important; /* Lemon-like background for the body */
+}
+
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+  background-color: #eff1aa !important; /* Lemon-like background for the navbar*/
+}
+
+.navbar.scrolled {
+  background-color: #d32f2f !important; /* Red when scrolled */
+  color: white;
+}
+
+.nav-link {
+  color: #fbc02d; /* Lemon color for the navbar links */
+}
+
+.nav-link:hover {
+  color: #f44336 !important; /* Red on hover */
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #f44336 !important; /* Red for primary buttons */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #d32f2f !important; /* Darker red for hover effect */
+  border: 1px solid yellow !important;
+}
+
+.btn-secondary {
+  background-color: #fbc02d !important; /* Yellow for secondary buttons */
+  border: 1px solid red !important;
+}
+
+.btn-secondary:hover {
+  background-color: #ffeb3b !important; /* Lemon yellow for hover */
+}
+
+/* Hero Section */
+.hero {
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: url('images/hero.webp') no-repeat center center;
+  background-size: cover;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  animation: fadeInDown 1.5s ease-in-out;
+  color: #fbc02d; /* Lemon yellow for heading */
+}
+
+.hero p {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease-in-out;
+  color: #f4f4f4; /* Light lemon for paragraph text */
+}
+
+.hero .btn {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  background-color: #f44336; /* Red for buttons */
+  color: white;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.1);
+  background-color: #fbc02d; /* Yellow on hover */
+  color: red;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+  }
+}
+
+
+/* CSS for About Section */
+
+#about .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#about .card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for hover */
+  border: 1px solid red !important;
+}
+
+#about .card-title {
+  font-size: 1.4rem;
+  color: #FF0000; /* Red for titles */
+}
+
+#about .card-text {
+  font-size: 1rem;
+  color: #333; /* Dark gray text for readability */
+  line-height: 1.6;
+}
+
+#about .card-img-top {
+  border-radius: 8px; /* Smooth edges for images */
+  transition: opacity 0.3s ease-in-out;
+}
+
+#about .card-img-top:hover {
+  opacity: 0.9;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: #FF0000; /* Red color for emphasis */
+}
+
+.text-light {
+  color: rgba(255, 255, 255, 0.7); /* Light white for subtext */
+}
+
+/* Glowing Red Border on Hover */
+#about .card:hover {
+  border: 2px solid #FF0000;
+  box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.5); /* Glow effect for hover */
+}
+
+
+/* Styling for the Register Section */
+#register {
+  padding: 50px 0;
+  background-color: rgb(246, 246, 223);
+}
+
+/* Card styles */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid yellow !important;
+}
+
+.card-title {
+  color: yellow !important; /* yellow color */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+      margin-bottom: 20px;
+  }
+}
+
+/* Image Hover Effects */
+#register img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#register img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Shadow for Overlay Text */
+.text-shadow {
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
